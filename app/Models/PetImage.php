@@ -1,0 +1,16 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Model;
+
+class PetImage extends Model
+{
+    protected $fillable = [
+        'image_path','pet_id'
+    ];
+    public function pet()
+{
+    return $this->belongsTo(Pet::class);
+}
+}
