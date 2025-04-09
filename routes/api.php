@@ -5,3 +5,4 @@ use Illuminate\Support\Facades\Route;
 
 require __DIR__.'/api/pets.php';
 require __DIR__.'/api/product.php';
+require __DIR__.'/api/blog.php';
