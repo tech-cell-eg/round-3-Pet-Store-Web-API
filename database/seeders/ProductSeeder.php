@@ -18,26 +18,17 @@ class ProductSeeder extends Seeder
                 'name' => 'Living Room Sofa',
                 'category_name' => 'Woonkamer',
                 'price' => 899.99,
-                'size' => '200x90x80 cm'
+                'size' => '200x90x80 cm',
+                'image'=>'products/Product1.jpg'
             ],
             [
                 'name' => 'Bed Frame',
                 'category_name' => 'Bedden',
                 'price' => 499.50,
-                'size' => '180x200 cm'
+                'size' => '180x200 cm',
+                 'image'=>'products/Product2.jpg'
             ],
-            [
-                'name' => 'Dining Table',
-                'category_name' => 'Eetkamer',
-                'price' => 650.00,
-                'size' => '160x90 cm'
-            ],
-            [
-                'name' => 'Table Lamp',
-                'category_name' => 'Lampen',
-                'price' => 45.99,
-                'size' => '30x30x50 cm'
-            ],
+           
         ];
 
         foreach ($products as $product) {

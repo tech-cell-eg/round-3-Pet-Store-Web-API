@@ -4,21 +4,15 @@ namespace App\Services;
 
 
 use App\DTOs\ProductDTO ;
+use App\Http\Resources\ProductResource;
 use App\Models\Product;
 
 class ProductService
 {
-    public function getAllProducts(): array
+    public function getAllProducts()
     {
         $products = Product::all();
         
-        return $products->map(function ($product) {
-            return new ProductDTO(
-                $product->name,
-                $product->category_name,
-                $product->price,
-                $product->size
-            );
-        })->toArray();
+        return $products;
     }
 }
