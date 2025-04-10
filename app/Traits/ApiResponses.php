@@ -8,15 +8,6 @@ use Illuminate\Http\JsonResponse;
 trait ApiResponses
 {
 
-    protected function errorResponse($message, $code)
-    {
-        return response()->json(['error' => $message, 'code' => $code], $code);
-    }
-
-    protected function showAll(Collection $collection, $code = 200)
-    {
-        return $this->successResponse(['data' => $collection], $code);
-    }
 
     protected static function successResponse(array $params = [], int $code = 200): JsonResponse
 {
@@ -29,10 +20,7 @@ trait ApiResponses
 }
 
 
-    protected function showOne(Model $model, $code = 200)
-    {
-        return $this->successResponse(['data' => $model], $code);
-    }
+  
 }
 
 ?>

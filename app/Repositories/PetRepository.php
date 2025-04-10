@@ -6,6 +6,7 @@ namespace App\Repositories;
 
 use App\DTO\PetDTO;
 use App\Mappers\PetMapper;
+use App\Models\Category;
 use App\Models\Pet;
 use App\Repositories\Interfaces\PetRepositoryInterface;
 
@@ -25,11 +26,9 @@ class PetRepository
         return $pet ??  null;
     }
 
-    public function getPetsByCategory(int $categoryId)
+    public function getPetsByCategory(Category $category)
     {
-        $pets = Pet::with('images')
-            ->where('category_id', $categoryId)
-            ->get();
+        $pets = $category->pets;
             
         return $pets;
     }

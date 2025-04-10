@@ -2,6 +2,7 @@
 namespace App\Services;
 
 use App\DTO\PetDTO;
+use App\Models\Category;
 use App\Repositories\PetRepository;
 
 class PetService
@@ -20,8 +21,8 @@ class PetService
         return $this->petRepository->getPetById($id);
     }
 
-    public function getPetsByCategory(int $categoryId)
+    public function getPetsByCategory(Category $category)
     {
-        return $this->petRepository->getPetsByCategory($categoryId);
+        return $this->petRepository->getPetsByCategory($category);
     }
 }
